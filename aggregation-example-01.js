@@ -6,7 +6,7 @@ async function accountByCategory() {
   const db = instance.getDb("finance");
   const accounts = db.collection("accounts");
   const pipeline = [
-    { $match: { balance: { $gt: 600 } } },
+    {},
     {
       $group: {
         _id: "$accountType",
